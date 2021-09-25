@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-import {Card, Container, Row, Col} from 'react-bootstrap'
+import {Table, Card, Container, Row, Col} from 'react-bootstrap'
 
 // import UserContext from './../UserContext'
 
@@ -11,11 +11,6 @@ export default function Profile(){
 	const [email, setEmail] = useState('')
 	const [enrollments, setEnrollments] = useState([])
 
-				// let enrollList = "";
-				// 	for (let i = 0; i < result.enrollments.length; i++ ){
-
-				// 		enrollList += `<Card.Text>${result.enrollments[i].name}</Card.Text>`;
-				// 	}
 
 	useEffect(() => {
 			let token = localStorage.getItem('token');
@@ -31,13 +26,14 @@ export default function Profile(){
 
 				let enrollList = result.enrollments.map((subjects) => {
 				return (
-					<>
-					<h5 >{subjects.name}</h5>
-					<p >{subjects.description}</p>
-					<p >{subjects.price}</p>
-					<p >{subjects.status}</p>
-					<p >{subjects.enrolledOn}</p>
-					</>
+			    <tr>
+			      <td>{subjects.name}</td>
+			      <td>{subjects.description}</td>
+			      <td>{subjects.status}</td>
+			      <td>{subjects.enrolledOn}</td>
+			      <td>{subjects.price}</td>
+			    </tr>
+
 					)
 				})
 
@@ -51,43 +47,37 @@ export default function Profile(){
 
 
 	return(
-
-	<Container fluid>
-		
-		<Card className="cards">
-		  <Card.Header>My Profile</Card.Header>
-		  <Card.Body>
-		<Row md={6} xs={12}>
-		  	<Col>
-			    <Card.Title className="card-title pt-3">First Name:</Card.Title>
-			    <Card.Text>{firstName}</Card.Text>
-		    </Col>
-		</Row>
-		  
-		<Row md={6} xs={12}>
-		    <Col>
-			    <Card.Title className="card-title pt-3">Last Name:</Card.Title>
-			    <Card.Text>{lastName}</Card.Text>
-		    </Col>
-		</Row>
-		    
-		<Row md={6} xs={12}>
-		    <Col>  
-			    <Card.Title className="card-title pt-3">Email:</Card.Title>
-			    <Card.Text>{email}</Card.Text>
-		    </Col>
-		</Row>
-
-
-		<Row md={6} xs={12}>
-		    <Col> 
-			    <Card.Title className="card-title pt-3">Enrollments:</Card.Title>
-			    <Card.Text>{enrollments}</Card.Text>
-		  	</Col>
-		</Row>
-		  	</Card.Body>
-		</Card>
-
-	</Container>	
+		<Container fluid className="my-3">
+			<Table>
+			  <tbody>
+			    <tr>
+			      <td>First Name</td>
+			      <td>{firstName}</td>
+			    </tr>
+			    <tr>
+			      <td>Last Name</td>
+			      <td>{lastName}</td>
+			    </tr>
+			    <tr>
+			      <td>Email</td>
+			      <td colSpan="2">{email}</td>
+			    </tr>
+			  </tbody>
+			</Table>
+			<h3>Enrollments</h3>
+			<Table>
+			  <tbody>
+			  	<tr>
+			      <th>Program Name</th>
+			      <th>Program Description</th>
+				  <th>Program Status</th>
+			      <th>Program Enrolled Date</th>
+			      <th>Program Price</th>
+			    </tr>
+				{enrollments}
+			</tbody>
+			</Table>
+		</Container>
+	
 		)
 }

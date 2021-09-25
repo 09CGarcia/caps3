@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Card, Row} from 'react-bootstrap'
+import {Card, Row, Container, Col} from 'react-bootstrap'
 
 export default function RandomProgram(){
 	const [description, setDescription] = useState([]);
@@ -32,16 +32,21 @@ export default function RandomProgram(){
 
 	return(
 
-
-		<Row className="my-5 d-flex justify-content-center">
-				<Card className="cards">
-				  <Card.Body>
+		<Container fluid>
+		<Row>
+			<Col xs={12}>
+				<Card className="cards p-3">
+				<Card.Img src="https://i.imgur.com/0M90bAW.png" height="200px"/>
+				<Card.ImgOverlay>
+				  
 				  	<Card.Title className="m-3 text-center">Featured Program</Card.Title>
 				    <Card.Text className="text-center">{name}</Card.Text>
 				    <Card.Text className="text-center">{description}</Card.Text>
 				    <Card.Text className="text-center">{price}</Card.Text>
-				  </Card.Body>
+				</Card.ImgOverlay>
 				</Card>
-		</Row>		
+			</Col>	
+		</Row>	
+	</Container>		
 		)
 }
