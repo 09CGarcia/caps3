@@ -1,0 +1,136 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+  color:#730C99;
+}
+
+.nav{
+	background-color: #693699;
+
+}
+
+.link{
+  font-size: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+
+
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D6DAF9;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+
+.link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.brand{
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 100px;
+	color: white;
+}
+
+.heading{
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 75px;
+}
+
+.desc{
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+.jumbotron{
+	 background: url(./images/bg5.png) fixed center no-repeat;
+	 background-size: cover;
+	
+}
+
+.cards{
+	background: rgba( 255, 222, 235, 0.45 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 20px );
+	-webkit-backdrop-filter: blur( 20px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	margin: 20px;
+}
+
+.heading-highlights{
+	font-weight: 900;
+	font-size: 50px;
+	text-transform: uppercase;
+
+}
+
+.display-5{
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 20px;
+}
+.Form{
+	/*background-color: #D6DAF9;*/
+	padding: 20px;
+	border-radius: 10px;
+	background: rgba( 214, 243, 252, 0.45 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 6px );
+	-webkit-backdrop-filter: blur( 6px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.label{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.td-desc{
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.heading-table{
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.title-admin{
+	size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 20px;
+}
+
+.title-modal{
+	text-transform: uppercase;
+	padding: 20px;
+}
+
+.card-title{
+	size: 20px;
+	text-transform: uppercase;
+}
+
