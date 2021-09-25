@@ -26,10 +26,10 @@ export default function SpecificProgram(){
 	useEffect( () => {
 		fetch(`https://apithetinker-cap3.herokuapp.com/api/programs/${programId}`,
 			{
-				method: "GET",
-				headers: {
-					"Authorization": `Bearer ${token}`
-				}
+				method: "GET"
+				// headers: {
+				// 	"Authorization": `Bearer ${token}`
+				// }
 			}
 		)
 		.then(result => result.json())

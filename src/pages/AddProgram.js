@@ -54,9 +54,12 @@ export default function AddCourse(){
 			if(data === true){
 
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					text: "Program successfully added"
+				  title: 'Program successfully added.',
+				  icon: "success",
+				  width: 600,
+				  padding: '3em',
+				  background: '#fff url(https://i.imgur.com/0M90bAW.png)',
+				  backdrop: `rgba(0,0,123,0.4)`
 				})
 
 				history.push('/programs');
@@ -64,9 +67,12 @@ export default function AddCourse(){
 			} else {
 
 				Swal.fire({
-					title: "Failed",
-					icon: "error",
-					text: "Please try again"
+				  title: 'Oops, something went wrong.',
+				  icon: "error",
+				  width: 600,
+				  padding: '3em',
+				  background: '#fff url(https://i.imgur.com/0M90bAW.png)',
+				  backdrop: `rgba(255,192,203,0.4)` 
 				})
 
 			}
