@@ -76,18 +76,24 @@ export default function Register(){
 						console.log(result)
 
 						Swal.fire({
-							title: "Registration Successful",
-							icon: "success",
-							text: "Welcome to The Tinker Tutorial"
+						  title: 'Welcome to The Tinker Tutorial!',
+						  icon: "success",
+						  width: 600,
+						  padding: '3em',
+						  background: '#fff url(https://i.imgur.com/0M90bAW.png)',
+						  backdrop: `rgba(0,0,123,0.4)`
 						})
 
 						history.push('/login');
 
 					} else {
 						Swal.fire({
-							title: 'Something went wrong',
-							icon: 'error',
-							text: 'Please try again'
+						  title: 'Oops. Check your details again.',
+						  icon: "error",
+						  width: 600,
+						  padding: '3em',
+						  background: '#fff url(https://i.imgur.com/0M90bAW.png)',
+						  backdrop: `rgba(255,192,203,0.4)` 
 						})
 					}
 				})

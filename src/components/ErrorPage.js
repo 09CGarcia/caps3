@@ -11,7 +11,7 @@ export default function ErrorPage(){
 					<Jumbotron fluid className="px-3">
 						<h1>Page not Found</h1>
 						<h4>Sorry</h4>
-						<Link as={Link} to="/">Go Back Home</Link>
+						<Link as={Link} to="/" variant="info">Go Back Home</Link>
 					</Jumbotron>
 				</Col>
 			</Row>
