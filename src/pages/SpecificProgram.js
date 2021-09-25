@@ -83,9 +83,9 @@ export default function SpecificProgram(){
 
 	return(
 		<Container>
-			<Card>
+			<Card className="cards m-5">
 				<Card.Header>
-					<h4>
+					<h4 className="heading-highlights">
 						{name}
 					</h4>
 				</Card.Header>
@@ -93,7 +93,7 @@ export default function SpecificProgram(){
 					<Card.Text>
 						{description}
 					</Card.Text>
-					<h6>
+					<h6 className="heading-highlights">
 						Price: Php 
 						<span className="mx-2">{price}</span>
 					</h6>
@@ -101,7 +101,7 @@ export default function SpecificProgram(){
 				<Card.Footer>
 					{
 						(user.id !== null) ?
-								<Button variant="primary" 
+								<Button variant="info py-3" 
 								onClick={ () => enroll() }
 
 								>Enroll</Button>

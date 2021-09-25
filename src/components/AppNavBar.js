@@ -37,7 +37,7 @@ export default function AppNavbar(){
 
   return (
     <Navbar className="nav" expand="lg" variant="dark">
-      <Navbar.Brand className="brand" as={Link} to="/">The Tinker Tutorial</Navbar.Brand>
+      <Navbar.Brand className="brand" as={Link} to="/">T3</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav>
